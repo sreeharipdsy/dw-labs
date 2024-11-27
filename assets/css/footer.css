@@ -34,7 +34,9 @@
   }
   /* .footer .brand h1:nth-child(2) {color: #ffd500d0;} */
   /* .footer .brand h1:nth-child(3) {color: #FFD300;} */
-  .footer .content p {
+  .footer .content a {
     text-align: center;
+    margin-block: 3px;
+    text-decoration: none;
   }
 }
