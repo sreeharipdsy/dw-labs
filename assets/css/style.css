@@ -39,7 +39,7 @@ section {
   height: auto;
   display: flex;
   align-items: center;
-  padding-top: 2.5%;
+  padding-top: 1%;
 }
 
 .hero-section {
@@ -283,22 +283,22 @@ section {
 .grid-layout .card {
   height: 22.5em;
   width: 22.5em;
-  padding: 1em;
+  /* padding: 1em; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5em;
-  color: #FFD300;
+  /* color: #FFD300;
   border: 2.5px solid #FFD300;
-  border-radius: 1em;
+  border-radius: 1em; */
   text-align: center;
   background-color: transparent;
 }
 
 .grid-layout .card img {
-  height: 75%;
-  width: 100%;
+  height: 60%;
+  width: 75%;
 }
 
 .grid-layout .card p {
@@ -316,6 +316,44 @@ section {
   margin-bottom: 1.75em;
 }
 
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  border: 2.5px solid #FFD300;
+  border-radius: 1em;
+  background-color: #000;
+  color: #FFD300;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  color: #000;
+  background: #FFD300;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
 .section-two .mobile {display: none;}
 @media (max-width: 991px) {
   .grid-layout {display: none;}
@@ -331,6 +369,7 @@ section {
   .section-two .text p {font-size: 18px;}
 }
 .section-two .mobile .card {
+  min-height: 14em;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -342,15 +381,24 @@ section {
   border-radius: 1em;
   text-align: center;
   background-color: transparent;
+  transition: 0.3s;
 }
 .section-two .mobile .card img {
   width: 100%;
   height: 7.5em;
+  transition: 0.3s;
 }
 .section-two .mobile .card p {
   margin: 0;
   font-size: 18px;
   font-weight: 600;
+}
+.section-two .mobile .card:hover {
+  color: #000;
+  background: #FFD300;
+}
+.section-two .mobile .card:hover img {
+  display: none;
 }
 
 
