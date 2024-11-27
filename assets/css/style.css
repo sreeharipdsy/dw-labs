@@ -443,13 +443,13 @@ section {
   margin: 0;
   transition: 0.2s;
 }
-.section-three .button {
+.section-three .button, .section-four .button {
   margin-top: 3em;
-  margin-bottom: 5em;
+  margin-bottom: 6em;
   display: flex;
   justify-content: center;
 }
-.section-three .button a {
+.section-three .button a, .section-four .button a {
   font-size: 30px;
   font-weight: 400;
   text-align: center;  
@@ -460,7 +460,7 @@ section {
   transition: 0.2s;
   padding: 0.6em 7.5em 0.25em 7.5em;
 }
-.section-three .button a:hover {
+.section-three .button a:hover, .section-four .button a:hover {
   scale: 1.075;
   border-radius: 25px;
 }
@@ -488,7 +488,7 @@ section {
   line-height: 60px;
   text-align: center;
   color: #9A9A9A;
-  margin-bottom: 2.75em;
+  margin-bottom: 1.5em;
 }
 @media (max-width: 991px) {
   .section-four {padding-top: 40px;}

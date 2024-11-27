@@ -109,8 +109,8 @@ img {
     font-weight: 600;
     font-size: 16px;
     background: #FFD300;
-    padding: 0 3em;
-    height: 2.5em;
+    padding: 0.5em 4em;
+    height: 2.25em;
     border: none;
     transition: 0.2s;
   }
