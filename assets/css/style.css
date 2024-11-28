@@ -104,6 +104,19 @@ section {
   color: #FFD300;
 }
 
+@media (max-width: 1400px) {
+  .hero-section .overlay h1 {font-size: 44px;}
+  .hero-section .overlay h1 span {
+    font-size: 72px;
+    line-height: 50px;
+  }
+  .hero-section .overlay h2 {font-size: 44px;}
+  .hero-section .overlay p {
+    font-size: 30px;
+    margin: 0;
+  }
+}
+
 @media (max-width: 991px) {
   .section-one {
     height: 75vh;
@@ -122,8 +135,7 @@ section {
   .hero-section .overlay h2 {font-size: 36px;}
   .hero-section .overlay p {
     font-size: 18px;
-    margin-left: 1%;
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
@@ -377,14 +389,49 @@ section {
   align-items: center;
   gap: 1em;
   color: #FFD300;
-  border: 2.5px solid #FFD300;
+  /* border: 2.5px solid #FFD300; */
   border-radius: 1em;
   text-align: center;
   background-color: transparent;
   transition: 0.3s;
 }
-.section-two .mobile .card img {
+.section-two .mobile .card .front,
+.section-two .mobile .card .back {
+  position: absolute;
   width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  color: #FFD300;
+  border: 2.5px solid #FFD300;
+  border-radius: 1em;
+  text-align: center;
+  transition: transform 0.6s ease;
+}
+
+.section-two .mobile .card .front {
+  background-color: transparent;
+}
+
+.section-two .mobile .card .back {
+  background-color: #FFD300;
+  color: #000;
+  transform: rotateY(180deg);
+}
+
+.section-two .mobile .card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.section-two .mobile .card:hover .back {
+  transform: rotateY(0);
+}
+.section-two .mobile .card img {
+  width: 80%;
   height: 7.5em;
   transition: 0.3s;
 }
@@ -397,7 +444,7 @@ section {
   color: #000;
   background: #FFD300;
 }
-.section-two .mobile .card:hover img {
+/* .section-two .mobile .card:hover img {
   display: none;
 }
 .section-two .mobile .card .description {
@@ -408,7 +455,7 @@ section {
 }
 .section-two .mobile .card:hover .description {
   display: block;
-}
+} */
 
 
 /* SECTION THREE */
