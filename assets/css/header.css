@@ -68,7 +68,7 @@ img {
     /* background: #ffead936; */
     border-radius: 0px 20px;
     padding-block: 15px;
-    padding-left: 15px;
+    /* padding-left: 15px; */
   }
   .header .navbar-nav ul {
     display: flex;
@@ -132,6 +132,7 @@ img {
   @media (max-width: 991px) {
     .header .navbar-nav ul button {
       font-size: 13px;
+      width: 100%;
     }
     .header .navbar-nav ul {gap: 0.5em;}
     .header .navbar .menu-icon {display: flex;}
@@ -181,11 +182,6 @@ img {
     .header .navbar-nav ul li a {
       font-size: 14px;
       background: none;
-    }
-    .header .navbar-nav ul li a:hover {
-      color: #724d33 !important;
-      background: #ffead936;
-      border-radius: 0px 20px;
     }
     .header .navbar-nav ul li a::after {
       display: none;

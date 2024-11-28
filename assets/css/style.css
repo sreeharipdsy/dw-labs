@@ -122,7 +122,7 @@ section {
   .hero-section .overlay h2 {font-size: 36px;}
   .hero-section .overlay p {
     font-size: 18px;
-    margin-left: 3%;
+    margin-left: 1%;
     margin-bottom: 0;
   }
 }
@@ -400,6 +400,15 @@ section {
 .section-two .mobile .card:hover img {
   display: none;
 }
+.section-two .mobile .card .description {
+  display: none;
+}
+.section-two .mobile .card:hover p {
+  display: none;
+}
+.section-two .mobile .card:hover .description {
+  display: block;
+}
 
 
 /* SECTION THREE */
@@ -464,9 +473,12 @@ section {
   scale: 1.075;
   border-radius: 25px;
 }
+.section-three .mobile {display: none;}
 @media (max-width: 991px) {
   .section-three {padding-top: 50px;}
   .section-three .title h1, .section-four .title h1 {font-size: 36px;}
+  .section-three .desktop {display: none;}
+  .section-three .mobile {display: grid;}
   .section-three .items {grid-template-columns: 1fr;}
   .section-three .item {padding: 2em;}
   .section-three .item p {font-size: 21px; line-height: 40px;}
