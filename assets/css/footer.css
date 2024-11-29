@@ -20,7 +20,7 @@
 .footer img {
   width: 1em;
 }
-
+.footer .content a {text-decoration: none;}
 @media (max-width: 991px) {
   .footer .brand {
     margin-top: 3em;
@@ -37,6 +37,5 @@
   .footer .content a {
     text-align: center;
     margin-block: 3px;
-    text-decoration: none;
   }
 }
